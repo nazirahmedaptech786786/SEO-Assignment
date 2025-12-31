@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="a-1 uniform city camden photos" >
+    <meta name="description" content="1 review of A 1 UNIFORM CITY "I've been to this place multiple times, and I've not had a pleasant experience even one time. The assistants are young people.">
+    <title>A-1 Uniforms</title>
+    <link rel="shortcut icon" href="logo4.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            color: #2c3e50;
+            overflow-x: hidden;
+        }
+
+        /* ===== PROMO BAR ===== */
+        .promo-bar {
+            background-color: #f39c12;
+            color: #fff;
+            overflow: hidden;
+            white-space: nowrap;
+            font-weight: bold;
+            font-size: 14px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .promo-bar span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll 15s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background-color: #2c3e50;
+            padding: 0 25px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .navbar-logo img {
+            height: 60px;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background-color: #ecf0f1;
+            margin: 4px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Nav Menu */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .navbar-links {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            list-style: none;
+        }
+
+        .navbar-links > li > a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 10px 0;
+            display: block;
+        }
+
+        .navbar-links > li > a:hover {
+            color: #f39c12;
+        }
+
+        /* Products Dropdown */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropbtn {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            padding: 10px 0;
+            background: none;
+            border: none;
+        }
+
+        .nav-dropbtn:hover {
+            color: #f39c12;
+        }
+
+        .nav-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2c3e50;
+            min-width: 220px;
+            border-radius: 10px;
+            padding: 10px 0;
+            display: none;
+            flex-direction: column;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+            z-index: 1000;
+        }
+
+        .nav-dropdown-menu a {
+            padding: 12px 18px;
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .nav-dropdown-menu a:hover {
+            background-color: #34495e;
+            color: #f39c12;
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu {
+            display: flex;
+        }
+
+        /* Navbar Right Icons */
+        .navbar-right {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .navbar-right a {
+            color: #ecf0f1;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .navbar-right a:hover {
+            color: #f39c12;
+        }
+
+        /* ===== HERO BANNER ===== */
+        .hero-banner {
+            position: relative;
+            width: 100%;
+            min-height: 500px;
+            overflow: hidden;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: auto;
+            min-height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.35);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            text-align: center;
+            z-index: 2;
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .btn-primary {
+            text-decoration: none;
+            background-color: #f39c12;
+            color: #fff;
+            padding: 14px 36px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: #e67e22;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        /* ===== SECTION TITLE ===== */
+        .section-title {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin: 50px 0 30px 0;
+            color: #2c3e50;
+            padding: 0 20px;
+        }
+
+        /* ===== PRODUCTS CONTAINER ===== */
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 0 5% 50px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 25px 20px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            max-width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            font-size: 18px;
+            color: #f39c12;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .product-card a.btn {
+            text-decoration: none;
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 6px;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+
+        .product-card a.btn:hover {
+            background-color: #34495e;
+        }
+
+        /* ===== OUR COMPANY SECTION ===== */
+        .our-company {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            padding: 60px 8%;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .company-text {
+            flex: 1;
+        }
+
+        .company-text h2 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .company-text p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .readmore-btn {
+            background: #2c3e50;
+            color: #fff;
+            padding: 14px 35px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 600;
+        }
+
+        .readmore-btn:hover {
+            background: #f39c12;
+            transform: translateY(-2px);
+        }
+
+        .company-image {
+            flex: 1;
+        }
+
+        .company-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ===== SCHOOL LOGO SECTION ===== */
+        .school-logo-section {
+            padding: 60px 0;
+            background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .school-section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 0 20px;
+        }
+
+        .school-section-title h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .school-section-title h2 span {
+            color: #006400;
+        }
+
+        .school-section-title p {
+            font-size: 1.1rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+        /* Logo Carousel */
+        .logo-carousel {
+            position: relative;
+            overflow: hidden;
+            padding: 30px 0;
+            background: #ffffff;
+        }
+
+        .logo-wrapper {
+            display: flex;
+            animation: scrollLeft 30s linear infinite;
+            width: fit-content;
+        }
+
+        .logo-wrapper:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scrollLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .logo-box {
+            flex-shrink: 0;
+            width: 180px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 15px;
+            padding: 15px;
+            background: #ffffff;
+            border-radius: 12px;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo-box:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,100,0,0.15);
+            border-color: #006400;
+        }
+
+        .logo-box img {
+            max-width: 100%;
+            max-height: 80px;
+            object-fit: contain;
+        }
+
+        /* ===== REVIEWS SECTION ===== */
+        .reviews-section {
+            padding: 60px 5%;
+            text-align: center;
+            background: #f8f9fa;
+        }
+
+        .reviews-section h2 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .reviews-section > p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .reviews-carousel {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .reviews-track {
+            display: flex;
+            animation: scrollReviews 25s linear infinite;
+        }
+
+        .reviews-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scrollReviews {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .review-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px 25px;
+            margin: 0 15px;
+            min-width: 300px;
+            max-width: 320px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .review-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .review-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #f39c12;
+        }
+
+        .review-card h3 {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .review-card span {
+            display: block;
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 15px;
+        }
+
+        .review-card p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 60px 5% 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-col h4 {
+            color: #f39c12;
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .footer-col a {
+            display: block;
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 12px;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: #f39c12;
+        }
+
+        .footer-col p {
+            font-size: 14px;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .footer-col i {
+            color: #f39c12;
+            margin-right: 10px;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: #f39c12;
+            transform: translateY(-3px);
+        }
+
+        .social-icons a i {
+            margin: 0;
+            color: #fff;
+        }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(243, 156, 18, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-bottom-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-bottom-left img {
+            height: 45px;
+        }
+
+        .footer-bottom-left p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* Payment Icons */
+        .payment-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .payment-icons a {
+            background: #fff;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: transform 0.3s;
+        }
+
+        .payment-icons a:hover {
+            transform: translateY(-3px);
+        }
+
+        .payment-icons img {
+            height: 20px;
+        }
+
+        /* ===== MOBILE OVERLAY ===== */
+        .mobile-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 998;
+        }
+
+        .mobile-overlay.active {
+            display: block;
+        }
+
+        /* ===== RESPONSIVE STYLES ===== */
+
+        /* Tablet - 1024px */
+        @media (max-width: 1024px) {
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .our-company {
+                padding: 50px 5%;
+                gap: 30px;
+            }
+
+            .company-text h2 {
+                font-size: 30px;
+            }
+        }
+
+        /* Tablet/Mobile - 900px */
+        @media (max-width: 900px) {
+            /* Hamburger Show */
+            .hamburger {
+                display: flex;
+            }
+
+            /* Mobile Menu */
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: #2c3e50;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 100px 30px 30px;
+                transition: right 0.3s ease;
+                z-index: 999;
+                overflow-y: auto;
+                gap: 0;
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .navbar-links {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                gap: 0;
+            }
+
+            .navbar-links > li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .navbar-links > li > a {
+                padding: 15px 0;
+                font-size: 18px;
+            }
+
+            /* Mobile Dropdown */
+            .nav-dropdown {
+                width: 100%;
+            }
+
+            .nav-dropbtn {
+                width: 100%;
+                justify-content: space-between;
+                padding: 15px 0;
+                font-size: 18px;
+            }
+
+            .nav-dropdown-menu {
+                position: static;
+                display: none;
+                width: 100%;
+                box-shadow: none;
+                background: rgba(0,0,0,0.2);
+                border-radius: 0;
+                padding: 0;
+            }
+
+            .nav-dropdown-menu.show {
+                display: flex;
+            }
+
+            .nav-dropdown-menu a {
+                padding: 12px 20px;
+            }
+
+            .nav-dropdown:hover .nav-dropdown-menu {
+                display: none;
+            }
+
+            /* Mobile Navbar Right */
+            .navbar-right {
+                width: 100%;
+                justify-content: center;
+                padding-top: 20px;
+                border-top: 1px solid rgba(255,255,255,0.1);
+                margin-top: 20px;
+            }
+
+            .navbar-right a {
+                font-size: 24px;
+            }
+
+            /* Our Company Section */
+            .our-company {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 5%;
+            }
+
+            .company-image {
+                order: -1;
+            }
+
+            .company-image img {
+                max-width: 100%;
+            }
+
+            /* Footer */
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-bottom-left {
+                flex-direction: column;
+            }
+
+            .payment-icons {
+                justify-content: center;
+            }
+        }
+
+        /* Mobile - 768px */
+        @media (max-width: 768px) {
+            .promo-bar {
+                font-size: 12px;
+                height: 30px;
+            }
+
+            .navbar-container {
+                height: 70px;
+            }
+
+            .navbar-logo img {
+                height: 50px;
+            }
+
+            .hero-banner {
+                min-height: 400px;
+            }
+
+            .hero-img {
+                min-height: 400px;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .btn-primary {
+                padding: 12px 28px;
+                font-size: 14px;
+            }
+
+            .section-title {
+                font-size: 26px;
+                margin: 40px 0 25px;
+            }
+
+            .products-container {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+                padding: 0 4% 40px;
+            }
+
+            .school-section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .school-section-title p {
+                font-size: 0.95rem;
+            }
+
+            .logo-box {
+                width: 150px;
+                height: 100px;
+                margin: 0 10px;
+            }
+
+            .logo-box img {
+                max-height: 65px;
+            }
+
+            .reviews-section {
+                padding: 40px 4%;
+            }
+
+            .reviews-section h2 {
+                font-size: 26px;
+            }
+
+            .review-card {
+                min-width: 260px;
+                padding: 25px 20px;
+            }
+        }
+
+        /* Small Mobile - 480px */
+        @media (max-width: 480px) {
+            .hero-banner {
+                min-height: 350px;
+            }
+
+            .hero-img {
+                min-height: 350px;
+            }
+
+            .hero-content h1 {
+                font-size: 26px;
+            }
+
+            .hero-content p {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+
+            .btn-primary {
+                padding: 10px 24px;
+                font-size: 13px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+
+            .products-container {
+                grid-template-columns: 1fr;
+                padding: 0 15px 30px;
+            }
+
+            .product-card {
+                padding: 20px 15px;
+            }
+
+            .company-text h2 {
+                font-size: 24px;
+            }
+
+            .company-text p {
+                font-size: 15px;
+            }
+
+            .readmore-btn {
+                padding: 12px 28px;
+                font-size: 14px;
+            }
+
+            .school-section-title h2 {
+                font-size: 1.5rem;
+            }
+
+            .logo-box {
+                width: 130px;
+                height: 90px;
+            }
+
+            .review-card {
+                min-width: 240px;
+                margin: 0 10px;
+            }
+
+            .footer {
+                padding: 40px 15px 20px;
+            }
+
+            .footer-col h4 {
+                font-size: 16px;
+            }
+
+            .payment-icons a {
+                padding: 6px 8px;
+            }
+
+            .payment-icons img {
+                height: 16px;
+            }
+        }
+
+        /* Extra Small - 360px */
+        @media (max-width: 360px) {
+            .hero-content h1 {
+                font-size: 22px;
+            }
+
+            .nav-menu {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- PROMO BAR -->
+    <div class="promo-bar">
+        <span>🔥 Up to 50% OFF on all items! Limited Time Offer! Shop Now! 🔥</span>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <div class="navbar-logo">
+                <img src="logo4.png" alt="A-1 Uniform Logo">
+            </div>
+
+            <!-- Hamburger Menu -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Nav Menu -->
+            <div class="nav-menu" id="navMenu">
+                <ul class="navbar-links">
+                    <li><a href="Homepage.html">Home</a></li>
+                    <li><a href="About us page.html">About</a></li>
+                    <li><a href="feedbackpage.html">Feedback</a></li>
+                    <li><a href="contactuspage.html">Contact Us</a></li>
+
+                    <!-- Products Dropdown -->
+                    <li class="nav-dropdown">
+                        <button class="nav-dropbtn" id="dropdownBtn">
+                            Products <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                        <div class="nav-dropdown-menu" id="dropdownMenu">
+                            <a href="shirts.html">Shirts</a>
+                            <a href="skirts.html">Skirts</a>
+                            <a href="frocks.html">Frocks</a>
+                            <a href="pt-tshirts.html">P.T. T-Shirts</a>
+                            <a href="pt-shorts.html">P.T. Shorts</a>
+                            <a href="pt-trackpants.html">P.T. Track Pants</a>
+                            <a href="belts.html">Belts</a>
+                            <a href="ties.html">Ties</a>
+                            <a href="socks.html">Socks</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Navbar Right Icons -->
+                <div class="navbar-right">
+                    <a href="signuoform.html" title="Sign Up">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </a>
+                    <a href="#" title="Shopping Cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- HERO BANNER -->
+    <section class="hero-banner">
+        <img class="hero-img"
+            src="https://d3n4hccmbcfj87.cloudfront.net/uploads/2020/08/school-uniform-1024x576.jpg" alt="School Uniforms">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome to A-1 Uniforms</h1>
+            <p>Your one-stop solution for premium school uniforms!</p>
+            <a href="#" class="btn-primary">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- LATEST PRODUCTS -->
+    <h2 class="section-title">Latest Products</h2>
+    <div class="products-container">
+        <div class="product-card">
+            <img src="https://youniform.co/cdn/shop/products/PictureForWebJ5_2_dee0bd43-a36f-46e1-b3eb-0c650ef10705_720x.jpg?v=1667228711"
+                alt="FPS Hoodie">
+            <h3>FPS Hoodie</h3>
+            <p>$29.99</p>
+            <a href="productone.html" class="btn">View Product</a>
+        </div>
+        <div class="product-card">
+            <img src="https://youniform.co/cdn/shop/files/PictureForWeb17_900x.jpg?v=1694761433" alt="FPS Kids Trouser">
+            <h3>FPS Kids Trouser</h3>
+            <p>$39.99</p>
+            <a href="productsecond.html" class="btn">View Product</a>
+        </div>
+        <div class="product-card">
+            <img src="https://youniform.co/cdn/shop/products/PictureForWebJ2_900x.jpg?v=1667229358"
+                alt="FPS Bomber Jacket">
+            <h3>FPS Bomber Jacket</h3>
+            <p>$19.99</p>
+            <a href="productthird.html" class="btn">View Product</a>
+        </div>
+    </div>
+
+    <!-- OUR COMPANY -->
+    <div class="our-company">
+        <div class="company-text">
+            <h2>Our Company</h2>
+            <p>A-1 Uniform is Pakistan's First Online Uniform Supplier. Place orders from home and customize your fit! We provide high-quality uniforms for schools across Pakistan with fast delivery and excellent customer service.</p>
+            <button class="readmore-btn">Read More</button>
+        </div>
+        <div class="company-image">
+            <img src="https://youniform.co/cdn/shop/files/converted-pic-1536x1086_1080x.jpg?v=1649738416" alt="Our Company">
+        </div>
+    </div>
+
+    <!-- SCHOOL LOGO SECTION -->
+    <section class="school-logo-section">
+        <div class="school-section-title">
+            <h2>TOP VISITED <span>SCHOOLS</span></h2>
+            <p>Supplying Premium School Uniforms to Pakistan's Most Prestigious Institutions</p>
+        </div>
+
+        <!-- Logo Carousel -->
+        <div class="logo-carousel">
+            <div class="logo-wrapper">
+                <!-- School Logos -->
+                <div class="logo-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_yoTOtFpXqRSIxqxryL7djJP0Mx2o2T8HRg&s" alt="Beaconhouse">
+                </div>
+                <div class="logo-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmd42-qXnmzlxW1GVWcjiYBnSv7dr-HYWaxg&s" alt="City School">
+                </div>
+                <div class="logo-box">
+                    <img src="https://png.pngtree.com/png-clipart/20231002/original/pngtree-school-logo-pakistan-free-vector-png-image_13064239.png" alt="LGS">
+                </div>
+                <div class="logo-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThvGSINL47ngEvudx-Slch3sOFSSTA1SbHLA&s" alt="APS">
+                </div>
+                <div class="logo-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4N2WU3zTYw7SFhqO01Flu9z8GIzQr5BKl0w&s" alt="Froebel's">
+                </div>
+                <div class="logo-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWn3bVdEPop-FSKT7yjpCPybriIXrybKaeBg&s" alt="Bloomfield">
+                </div>
+                <div class="logo-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3y-oCfA7lGxgv0tINzLXDRqYOc-Tm0LhMDQ&s" alt="St. Patrick's">
+                </div>
+
+                <!-- Duplicate for seamless loop -->
+                <div class="logo-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_yoTOtFpXqRSIxqxryL7djJP0Mx2o2T8HRg&s" alt="Beaconhouse">
+                </div>
+                <div class="logo-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmd42-qXnmzlxW1GVWcjiYBnSv7dr-HYWaxg&s" alt="City School">
+                </div>
+                <div class="logo-box">
+                    <img src="https://png.pngtree.com/png-clipart/20231002/original/pngtree-school-logo-pakistan-free-vector-png-image_13064239.png" alt="LGS">
+                </div>
+                <div class="logo-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThvGSINL47ngEvudx-Slch3sOFSSTA1SbHLA&s" alt="APS">
+                </div>
+                <div class="logo-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4N2WU3zTYw7SFhqO01Flu9z8GIzQr5BKl0w&s" alt="Froebel's">
+                </div>
+                <div class="logo-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWn3bVdEPop-FSKT7yjpCPybriIXrybKaeBg&s" alt="Bloomfield">
+                </div>
+                <div class="logo-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3y-oCfA7lGxgv0tINzLXDRqYOc-Tm0LhMDQ&s" alt="St. Patrick's">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section class="reviews-section">
+        <h2>Customer Reviews</h2>
+        <p>Real feedback from our satisfied customers. Check out what they think!</p>
+
+        <div class="reviews-carousel">
+            <div class="reviews-track">
+                <!-- Reviews -->
+                <div class="review-card">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ali Khan">
+                    <h3>Ali Khan</h3>
+                    <span>CEO, TechCorp</span>
+                    <p>"Amazing quality uniforms! Fast delivery and excellent service."</p>
+                </div>
+                <div class="review-card">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sana Ahmed">
+                    <h3>Sana Ahmed</h3>
+                    <span>Teacher, Karachi School</span>
+                    <p>"The uniforms are very comfortable and the customization options are perfect."</p>
+                </div>
+                <div class="review-card">
+                    <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Usman Tariq">
+                    <h3>Usman Tariq</h3>
+                    <span>Manager, Uniform Supply Co.</span>
+                    <p>"High-quality products and the team is very professional. Highly recommended!"</p>
+                </div>
+                <div class="review-card">
+                    <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Fatima Noor">
+                    <h3>Fatima Noor</h3>
+                    <span>Student</span>
+                    <p>"Love the designs! Easy ordering and fast delivery."</p>
+                </div>
+
+                <!-- Duplicate for seamless loop -->
+                <div class="review-card">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ali Khan">
+                    <h3>Ali Khan</h3>
+                    <span>CEO, TechCorp</span>
+                    <p>"Amazing quality uniforms! Fast delivery and excellent service."</p>
+                </div>
+                <div class="review-card">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sana Ahmed">
+                    <h3>Sana Ahmed</h3>
+                    <span>Teacher, Karachi School</span>
+                    <p>"The uniforms are very comfortable and the customization options are perfect."</p>
+                </div>
+                <div class="review-card">
+                    <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Usman Tariq">
+                    <h3>Usman Tariq</h3>
+                    <span>Manager, Uniform Supply Co.</span>
+                    <p>"High-quality products and the team is very professional. Highly recommended!"</p>
+                </div>
+                <div class="review-card">
+                    <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Fatima Noor">
+                    <h3>Fatima Noor</h3>
+                    <span>Student</span>
+                    <p>"Love the designs! Easy ordering and fast delivery."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- HELP -->
+            <div class="footer-col">
+                <h4>Help</h4>
+                <a href="contactuspage.html">Contact Us</a>
+                <a href="Faqspage.html">FAQs</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="Paymentoption.html">Payment Options</a>
+            </div>
+
+            <!-- ABOUT -->
+            <div class="footer-col">
+                <h4>About</h4>
+                <a href="About us page.html">About Us</a>
+                <a href="terms & Conditions.html">Terms & Conditions</a>
+                <a href="privacy policy.html">Privacy Policy</a>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+                <h4>Contact A-1 Uniform</h4>
+                <p><i class="fa-solid fa-location-dot"></i>A-1 Uniforms, Main Road, Karachi, Pakistan</p>
+                <p><i class="fa-solid fa-phone"></i>+92 300 1234567</p>
+                <p><i class="fa-solid fa-envelope"></i>info@a1uniforms.com</p>
+
+                <h4 style="margin-top: 25px;">Get Social</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-left">
+                <img src="" alt="A-1 Uniform Logo">
+                <p>© 2025 A-1 Uniforms. All Rights Reserved.</p>
+            </div>
+            <div class="payment-icons">
+                <a href="Paymentoption.html" title="Visa">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+                </a>
+                <a href="Paymentoption.html" title="MasterCard">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="MasterCard">
+                </a>
+                <a href="Paymentoption.html" title="PayPal">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+                </a>
+                <a href="Paymentoption.html" title="American Express">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg" alt="American Express">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FOR MOBILE MENU TOGGLE -->
+    <script>
+        // Get Elements
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        const dropdownBtn = document.getElementById('dropdownBtn');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        const body = document.body;
+
+        // Toggle Mobile Menu
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (navMenu.classList.contains('active')) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = 'auto';
+            }
+        });
+
+        // Close menu when clicking overlay
+        mobileOverlay.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+            body.style.overflow = 'auto';
+        });
+
+        // Mobile Dropdown Toggle
+        dropdownBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Check if we're in mobile view
+            if (window.innerWidth <= 900) {
+                dropdownMenu.classList.toggle('show');
+                
+                // Rotate arrow icon
+                const icon = this.querySelector('i');
+                if (dropdownMenu.classList.contains('show')) {
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            }
+        });
+
+        // Close menu when clicking a link (mobile)
+        const navLinks = document.querySelectorAll('.navbar-links > li > a:not(.nav-dropbtn)');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 900) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    mobileOverlay.classList.remove('active');
+                    body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Close dropdown menu links
+        const dropdownLinks = document.querySelectorAll('.nav-dropdown-menu a');
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 900) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    mobileOverlay.classList.remove('active');
+                    dropdownMenu.classList.remove('show');
+                    body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 900) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                dropdownMenu.classList.remove('show');
+                body.style.overflow = 'auto';
+                
+                // Reset dropdown icon
+                const icon = dropdownBtn.querySelector('i');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
